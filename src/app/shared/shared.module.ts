@@ -9,28 +9,34 @@ import {CardModule} from 'primeng/card';
 import { BrowserModule } from '@angular/platform-browser';
 import {ButtonModule} from 'primeng/button';
 import { SupermotButtonComponent } from './component/supermot-button/supermot-button.component';
+import {InputNumberModule} from 'primeng/inputnumber';
+import { SupermotInputNumberComponent } from './form/supermot-input-number/supermot-input-number.component';
+import { FormsModule } from '@angular/forms';
 
 
 const PRIME_NG= [
     DropdownModule,
     InputTextModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    InputNumberModule
 ]
 
 const COMPONENTS = [
     CardComponent,
     ListComponent,
     SupermotDropdownComponent,
-    SupermotInputComponent
+    SupermotInputComponent,
+    SupermotInputNumberComponent,
+    SupermotButtonComponent
 ]
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    SupermotButtonComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ...PRIME_NG,
 
   ],

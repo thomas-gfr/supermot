@@ -1,1 +1,23 @@
-<p>shopping-funnel works!</p>
+<div class="container-choice" *ngFor="let item of items">
+    <div class="item">
+        {{ item?.image }}
+        <h3>
+            {{ item?.name }}
+        </h3>
+        <p>
+            {{ item?.category }}
+            {{ item?.description }}
+        </p>
+        <div class="item-quantity">
+            <span class="quantity">
+                <app-supermot-input-number (emitOnChange)="quantityChange($event, item)"></app-supermot-input-number>
+            </span>
+        </div>
+        <div class="item-price">
+            <span class="price">
+                {{ item?.total | currency: '€' }}
+            </span>
+        </div>
+        
+    </div>
+</div>
