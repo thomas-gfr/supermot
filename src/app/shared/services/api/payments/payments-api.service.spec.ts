@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CufflinksApiService } from './cufflinks-api.service';
+import { PaymentsApiService } from './payments-api.service';
 
-describe('CufflinksApiService', () => {
-  let service: CufflinksApiService;
+describe('PaymentsApiService', () => {
+  let service: PaymentsApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CufflinksApiService);
+    service = TestBed.inject(PaymentsApiService);
   });
 
   it('should be created', () => {
