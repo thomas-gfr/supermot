@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ISuit } from 'src/app/shared/entity/suit.model';
+import { SuitApiService } from 'src/app/shared/services/api/suit/suit-api.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,41 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  public listObject: any[] = [
-    {
-      header: 'Header 1',
-      body: 'Body 1',
-      footer: 'Footer 1'
-    },
-    {
-      header: 'Header 1',
-      body: 'Body 1',
-      footer: 'Footer 1'
-      
-    },
-    {
-      header: 'Header 1',
-      body: 'Body 1',
-      footer: 'Footer 1'
-      
-    },
-    {
-      header: 'Header 1',
-      body: 'Body 1',
-      footer: 'Footer 1'
-      
-    },
-    {
-      header: 'Header 1',
-      body: 'Body 1',
-      footer: 'Footer 1'
-      
+    public listObject: ISuit[] = []
+
+    constructor(
+        private suitApiService: SuitApiService
+    ) { }
+
+    ngOnInit(): void {
+        this.suitApiService.getSuitList().subscribe((data: ISuit[]) => {
+            this.listObject = data;
+        })
     }
-  ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

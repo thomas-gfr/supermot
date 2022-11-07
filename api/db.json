@@ -1,0 +1,26 @@
+{
+    "suit": [
+        {
+            "id": 1,
+            "name": "Chemise rayure",
+            "description": "couleur blanche et noir"
+        },
+        {
+            "id": 2,
+            "name": "Chemise rayure",
+            "description": "couleur blanche et bleu"
+        }
+    ],
+    "belt": [
+        {
+            "id": 1,
+            "name": "ceinture",
+            "description": "couleur noir"
+        },
+        {
+            "id": 2,
+            "name": "ceinture rayé",
+            "description": "couleur noir et blanche"
+        }
+    ]
+  }

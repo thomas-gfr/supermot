@@ -7,11 +7,15 @@ import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
 import { BrowserModule } from '@angular/platform-browser';
+import {ButtonModule} from 'primeng/button';
+import { SupermotButtonComponent } from './component/supermot-button/supermot-button.component';
+
 
 const PRIME_NG= [
     DropdownModule,
     InputTextModule,
-    CardModule
+    CardModule,
+    ButtonModule
 ]
 
 const COMPONENTS = [
@@ -23,6 +27,7 @@ const COMPONENTS = [
 @NgModule({
   declarations: [
     ...COMPONENTS,
+    SupermotButtonComponent,
   ],
   imports: [
     BrowserModule,
