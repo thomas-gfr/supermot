@@ -7,6 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
+  public listObject: any[] = [
+    {
+      header: 'Header 1',
+      body: 'Body 1',
+      footer: 'Footer 1'
+    },
+    {
+      header: 'Header 1',
+      body: 'Body 1',
+      footer: 'Footer 1'
+      
+    },
+    {
+      header: 'Header 1',
+      body: 'Body 1',
+      footer: 'Footer 1'
+      
+    },
+    {
+      header: 'Header 1',
+      body: 'Body 1',
+      footer: 'Footer 1'
+      
+    },
+    {
+      header: 'Header 1',
+      body: 'Body 1',
+      footer: 'Footer 1'
+      
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
