@@ -3,12 +3,18 @@
         {
             "id": 1,
             "name": "Chemise rayure",
-            "description": "couleur blanche et noir"
+            "description": "couleur blanche et noir",
+            "price": 20,
+            "quantity": 1,
+            "category": "Chemise"
+            
         },
         {
             "id": 2,
             "name": "Chemise rayure",
-            "description": "couleur blanche et bleu"
+            "description": "couleur blanche et bleu",
+            "price": 200,
+            "quantity": 1
         }
     ],
     "belt": [

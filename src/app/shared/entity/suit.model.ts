@@ -6,7 +6,7 @@ export interface ISuit {
     image?: string;
     category?: string;
     quantity?: number;
-    
+    total?: number;
 }
 export class Suit implements ISuit {
     constructor(
@@ -17,5 +17,6 @@ export class Suit implements ISuit {
         public image?: string,
         public category?: string,
         public quantity?: number,
+        public total?: number,
     ) {}
 }

@@ -6,6 +6,6 @@
     <ng-template pTemplate="footer">
         {{footer}}
     </ng-template>
-    <app-supermot-button>
+    <app-supermot-button (emitOnClick)="onClickButton($event)" >
     </app-supermot-button>
 </p-card>
