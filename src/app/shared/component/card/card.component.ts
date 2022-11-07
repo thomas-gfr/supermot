@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-    @Input() header: string = '';
-    @Input() body: string = '';
-    @Input() footer: string = '';
+    @Input() header: string | undefined = '';
+    @Input() body: string | undefined = '';
+    @Input() footer: string | undefined = '';
     @Output() emitOnClick = new EventEmitter<Event>();
 
     constructor() { }

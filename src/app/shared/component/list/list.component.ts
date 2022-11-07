@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IArticles } from '../../entity/articles.model';
 import { ShopService } from '../../services/entity/shop/shop.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ShopService } from '../../services/entity/shop/shop.service';
 })
 export class ListComponent implements OnInit {
 
-    @Input() list: any[] = [];
+    @Input() list: IArticles[] = [];
     
     constructor(
         private router: Router,
@@ -20,7 +21,7 @@ export class ListComponent implements OnInit {
     }
 
     public onClickButton(item: any): void {
-        const items: any[] | null = []
+        const items: IArticles[] | null = []
         items.push(item);
         this.shopService.item$.next(items);
         this.router.navigate(['/shop/' + item.id]);

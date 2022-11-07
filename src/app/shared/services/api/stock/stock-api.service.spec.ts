@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BeltApiService } from './belt-api.service';
+import { StockApiService } from './stock-api.service';
 
-describe('BeltApiService', () => {
-  let service: BeltApiService;
+describe('StockApiService', () => {
+  let service: StockApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(BeltApiService);
+    service = TestBed.inject(StockApiService);
   });
 
   it('should be created', () => {

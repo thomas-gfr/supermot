@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ISuit } from 'src/app/shared/entity/suit.model';
-import { SuitApiService } from 'src/app/shared/services/api/suit/suit-api.service';
+import { IArticles } from 'src/app/shared/entity/articles.model';
+import { ArticlesApiService } from 'src/app/shared/services/api/articles/articles-api.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,14 +9,14 @@ import { SuitApiService } from 'src/app/shared/services/api/suit/suit-api.servic
 })
 export class LandingPageComponent implements OnInit {
 
-    public listObject: ISuit[] = []
+    public listObject: IArticles[] = []
 
     constructor(
-        private suitApiService: SuitApiService
+        private articleApiService: ArticlesApiService
     ) { }
 
     ngOnInit(): void {
-        this.suitApiService.getSuitList().subscribe((data: ISuit[]) => {
+        this.articleApiService.getArticlesList().subscribe((data: IArticles[]) => {
             this.listObject = data;
         })
     }
