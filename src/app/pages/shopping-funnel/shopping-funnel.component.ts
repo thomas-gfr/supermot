@@ -29,4 +29,12 @@ export class ShoppingFunnelComponent implements OnInit {
             // item.total = item?.price * quantity;
         }
     }
+
+    public onClick(): void {
+        this.router.navigate(['shop/payment']);
+    }
+
+    public clearStorage(): void {
+        this.localStorage.clearData();
+    }
 }
