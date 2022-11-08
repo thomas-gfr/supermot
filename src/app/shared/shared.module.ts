@@ -14,6 +14,8 @@ import { SupermotInputNumberComponent } from './form/supermot-input-number/super
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
 import {SelectButtonModule} from 'primeng/selectbutton';
+import {CarouselModule} from 'primeng/carousel';
+import { SupermotCarouselComponent } from './component/supermot-carousel/supermot-carousel.component';
 
 
 const PRIME_NG= [
@@ -23,7 +25,8 @@ const PRIME_NG= [
     ButtonModule,
     InputNumberModule,
     ToastModule,
-    SelectButtonModule
+    SelectButtonModule,
+    CarouselModule
 ]
 
 const COMPONENTS = [
@@ -32,6 +35,7 @@ const COMPONENTS = [
     SupermotDropdownComponent,
     SupermotInputComponent,
     SupermotInputNumberComponent,
+    SupermotCarouselComponent,
     SupermotButtonComponent
 ]
 @NgModule({
