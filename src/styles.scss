@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e5e5e5;
+    padding: 20px 10px;
+    
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 24.38px;
+        text-decoration: underline;
+    }
+    hr {
+        color: #C9ADA7;
+        width: 90vw;
+        height: 1px;
+        margin: auto;
+    }
+
+    .logo {
+        margin: auto;
+        display: block;
+    }
+    .text-yellow {
+        color: #FCA311;
+    }
+    .text-green {
+        color: #46CB53;
+    }
+    .text-red {
+        color: #A50909;
+    }
+
+
+
+    .p-card {
+        .p-card-body, .p-card-content {
+        padding: 0;
+        }
+    }
+
+    .p-button{
+        background-color: #FCA311;
+        color: black;
+        text-transform: uppercase;
+    }
+    .sticky-button{
+        position: sticky;
+        bottom: 60px;
+    }
+}

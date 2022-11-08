@@ -1,11 +1,13 @@
 <p-card>
-    <ng-template pTemplate="header">
-        {{header}}
-    </ng-template>
-        {{body}}
-    <ng-template pTemplate="footer">
-        {{footer}}
-    </ng-template>
-    <app-supermot-button (emitOnClick)="onClickButton($event)" >
-    </app-supermot-button>
+    <div class="content">
+        <ng-template pTemplate="header">
+            {{header}}
+        </ng-template>
+            {{body}}
+        <ng-template pTemplate="footer">
+            {{footer}}
+        </ng-template>
+        <app-supermot-button (emitOnClick)="onClickButton($event)" >
+        </app-supermot-button>
+    </div>
 </p-card>

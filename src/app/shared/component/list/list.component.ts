@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
     constructor(
         private router: Router,
         private shopService: ShopService,
-        private localStorage: LocalStorageService
+        public localStorage: LocalStorageService
     ) { }
 
     ngOnInit(): void {
