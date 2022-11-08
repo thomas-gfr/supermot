@@ -20,9 +20,12 @@
         </div>
         <div class="item-price">
             <span class="price">
-                {{ item?.prix| currency: '€' }}
+                {{ item?.prix }} €
             </span>
         </div>
+    </div>
+    <div>
+        Prix total : {{ totalPrice }} €
     </div>
 </div>
 <app-supermot-button (emitOnClick)="onClick()" [label]="'Passer au paiment'" ></app-supermot-button>
