@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IArticles } from 'src/app/shared/entity/articles.model';
 import { ShopService } from 'src/app/shared/services/entity/shop/shop.service';
+import { LocalStorageService } from 'src/app/shared/services/local-storage/local-storage.service';
 
 @Component({
   selector: 'app-shopping-funnel',
@@ -14,17 +15,12 @@ export class ShoppingFunnelComponent implements OnInit {
 
     constructor(
         private shopService: ShopService,
-        private router: Router
+        private router: Router,
+        private localStorage: LocalStorageService
     ) { }
 
     ngOnInit(): void {
-        this.shopService.item$.subscribe((items: any) => {
-            if(items) {
-                this.items = items;
-            } else {
-                this.router.navigate(['/']);
-            }
-        })
+        this.items =  JSON.parse(localStorage.getItem('items')!)
     }
 
     public quantityChange(quantity: number, item: IArticles): void {
