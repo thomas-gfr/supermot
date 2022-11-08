@@ -12,7 +12,7 @@ export class LandingPageComponent implements OnInit {
     public listObject: IArticles[] = []
 
     constructor(
-        private articleApiService: ArticlesApiService
+        private articleApiService: ArticlesApiService,
     ) { }
 
     ngOnInit(): void {
