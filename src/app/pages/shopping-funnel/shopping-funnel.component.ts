@@ -11,24 +11,25 @@ import { LocalStorageService } from 'src/app/shared/services/local-storage/local
   styleUrls: ['./shopping-funnel.component.scss'],
 })
 export class ShoppingFunnelComponent implements OnInit {
-    size = [{
-        name: 'XS',
-        value: 'XS'
-    }, {
-        name: 'S',
-        value: 'S'
-    }, {
-        name: 'M',
-        value: 'M'
-    }, {
-        name: 'L',
-        value: 'L'
-    }, {
-        name: 'XL',
-        value: 'XL'
-    }]
-    selectedSize=''
-    items: IArticles[] = []
+    public size = [{
+            name: 'XS',
+            value: 'XS'
+        }, {
+            name: 'S',
+            value: 'S'
+        }, {
+            name: 'M',
+            value: 'M'
+        }, {
+            name: 'L',
+            value: 'L'
+        }, {
+            name: 'XL',
+            value: 'XL'
+        }]
+    public selectedSize=''
+    public totalPrice = 0
+    public items: IArticles[] = []
 
     constructor(
         private shopService: ShopService,
@@ -43,8 +44,7 @@ export class ShoppingFunnelComponent implements OnInit {
 
     public quantityChange(quantity: number, item: IArticles): void {
         if(item.prix) {
-            // item.quantity = quantity;
-            // item.total = item?.price * quantity;
+            this.totalPrice = item?.prix * quantity;
         }
     }
 
