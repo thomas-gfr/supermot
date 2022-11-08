@@ -13,6 +13,7 @@ import {InputNumberModule} from 'primeng/inputnumber';
 import { SupermotInputNumberComponent } from './form/supermot-input-number/supermot-input-number.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
+import {SelectButtonModule} from 'primeng/selectbutton';
 
 
 const PRIME_NG= [
@@ -21,7 +22,8 @@ const PRIME_NG= [
     CardModule,
     ButtonModule,
     InputNumberModule,
-    ToastModule
+    ToastModule,
+    SelectButtonModule
 ]
 
 const COMPONENTS = [

@@ -7,7 +7,6 @@ import { PaymentsApiService } from 'src/app/shared/services/api/payments/payment
   selector: 'app-form-final-shop',
   templateUrl: './form-final-shop.component.html',
   styleUrls: ['./form-final-shop.component.scss'],
-  providers: [MessageService]
 })
 export class FormFinalShopComponent implements OnInit {
 

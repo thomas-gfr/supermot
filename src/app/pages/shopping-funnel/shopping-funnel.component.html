@@ -1,3 +1,4 @@
+
 <app-supermot-button (emitOnClick)="clearStorage()" [label]="'Vider le panier'" ></app-supermot-button>
 
 <div class="container-choice" *ngFor="let item of items">
@@ -11,6 +12,8 @@
             {{ item?.description }}
         </p>
         <div class="item-quantity">
+            <p-selectButton [options]="size"  [(ngModel)]="selectedSize" optionLabel="name" optionValue="value"></p-selectButton>
+
             <span class="quantity">
                 <app-supermot-input-number (emitOnChange)="quantityChange($event, item)"></app-supermot-input-number>
             </span>
