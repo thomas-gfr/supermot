@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
 
     @Input() list: IArticles[] = [];
 
-    public buttonLabel: string = 'purchase';
+    public buttonLabel: string = 'Acheter';
     
     constructor(
         private router: Router,

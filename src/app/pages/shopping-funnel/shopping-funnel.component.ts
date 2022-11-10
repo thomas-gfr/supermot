@@ -70,7 +70,19 @@ export class ShoppingFunnelComponent implements OnInit {
         this.router.navigate(['/']);
     }
 
-    public onRemoveClick(item: string){
-        this.localStorage.removeData(item);
+    public onRemoveClick(item: number){
+        let localStorageTemp = JSON.parse(this.localStorage.getData('items')!);
+        localStorageTemp.splice(item, 1)
+
+        this.localStorage.removeData('items');
+        if (localStorageTemp.length > 0){
+            this.localStorage.saveData('items', JSON.stringify(localStorageTemp))
+            this.panier = JSON.parse(this.localStorage.getData('items')!)
+            
+            this.totalPrice = 0;
+            this.panier.forEach(element => this.totalPrice += element.prix!)
+        } else {
+            this.totalPrice = 0
+        }
     }
 }

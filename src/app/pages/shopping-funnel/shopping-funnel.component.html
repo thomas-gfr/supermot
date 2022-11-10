@@ -1,4 +1,4 @@
-<app-supermot-button *ngIf="panier" (emitOnClick)="clearStorage()" [label]="'Vider le panier'" ></app-supermot-button>
+<!-- <app-supermot-button *ngIf="panier" (emitOnClick)="clearStorage()" [label]="'Vider le panier'" ></app-supermot-button> -->
 <table>
     <tr>
         <th colspan="4">Produit</th>
@@ -10,16 +10,15 @@
         <td colspan="4">{{ item.nom }}</td>
         <td colspan="2">{{ 1 }}</td>
         <td colspan="2">{{ item.prix }} €</td>
-        <td colspan="1" class="remove"><img src="/assets/img/png/remove.png" (click)="onRemoveClick(indexOfelement.toString())"></td>
+        <td colspan="1" class="remove"><img src="/assets/img/png/remove.png" (click)="onRemoveClick(indexOfelement)"></td>
     </tr>
 </table>
 
-<app-supermot-carousel *ngIf="items" [data]="items"></app-supermot-carousel>
-<app-supermot-button (emitOnClick)="onClick()" [label]="'Commander'" ></app-supermot-button>
-
-
-
-
-<div>
-    Prix total : {{ totalPrice }} €
+<div class="prix_total">
+    <span class='lien'>Prix total :</span> {{ totalPrice }} €
 </div>
+<!-- <app-supermot-carousel *ngIf="items" [data]="items"></app-supermot-carousel> -->
+<app-supermot-button (emitOnClick)="onClick()" [label]="'Acheter'" ></app-supermot-button>
+
+
+
