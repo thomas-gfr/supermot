@@ -69,4 +69,8 @@ export class ShoppingFunnelComponent implements OnInit {
         this.messageService.add({severity:'success', summary:'Success', detail:'Storage cleared'});
         this.router.navigate(['/']);
     }
+
+    public onRemoveClick(item: string){
+        this.localStorage.removeData(item);
+    }
 }

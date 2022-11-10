@@ -1,14 +1,16 @@
 <app-supermot-button *ngIf="panier" (emitOnClick)="clearStorage()" [label]="'Vider le panier'" ></app-supermot-button>
 <table>
     <tr>
-        <th colspan="3">Produit</th>
-        <th colspan="1">Quantité</th>
-        <th colspan="1">Prix</th>
+        <th colspan="4">Produit</th>
+        <th colspan="2">Quantité</th>
+        <th colspan="2">Prix</th>
+        <th colspan="1">Gérer</th>
     </tr>
-    <tr class="container-choice" *ngFor="let item of panier">
-        <td colspan="3">{{ item.nom }}</td>
-        <td>{{ 1 }}</td>
-        <td>{{ item.prix }} €</td>
+    <tr class="container-choice" *ngFor="let item of panier; let indexOfelement=index;">
+        <td colspan="4">{{ item.nom }}</td>
+        <td colspan="2">{{ 1 }}</td>
+        <td colspan="2">{{ item.prix }} €</td>
+        <td colspan="1" class="remove"><img src="/assets/img/png/remove.png" (click)="onRemoveClick(indexOfelement.toString())"></td>
     </tr>
 </table>
 
