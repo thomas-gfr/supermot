@@ -11,7 +11,6 @@ export class SupermotCarouselComponent implements OnInit {
     public items: IArticles[] = [];
     
     @Input() set data( value: IArticles[]) {
-        console.log(value)
         this.items = value
     }
 
@@ -39,10 +38,6 @@ export class SupermotCarouselComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-    }
-
-    ngOnChanges(): void {
-        console.log(this.items);
     }
 
     public onClickButton(item: any): void {
