@@ -2,52 +2,72 @@
     "articles": [
         {
             "id": 1,
-            "nom": "Costume",
+            "nom": "Costume Flanelle",
             "description": "string",
             "couleur": "string",
-            "prix": 80,
+            "prix": 835,
             "type": "costume",
-            "image": "/assets/img/png/chemise.png",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F410259d9-40ae-4b56-9b4c-05cfabb8bf7d%2FUntitled.png?table=block&id=68a23678-8ae6-4e72-a894-4b57ba6b7f0b&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=1200&userId=&cache=v2",
             "groupe": 1
         },
         {
             "id": 2,
-            "nom": "Chemise1",
+            "nom": "Costume Twill",
             "description": "string",
             "couleur": "string",
-            "prix": 40,
-            "type": "chemise",
-            "image": "/assets/img/png/chemise.png",
+            "prix": 1350,
+            "type": "costume",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1e1dbded-51dd-4a4b-94ca-5d7af18d2dc5%2FUntitled.png?table=block&id=00827029-201d-44ff-b4a3-6a03728f5a45&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=2000&userId=&cache=v2",
             "groupe": 1
         },
         {
             "id": 3,
-            "nom": "Chemise2",
+            "nom": "Costume Honey Way",
             "description": "string",
             "couleur": "string",
-            "prix": 40,
-            "type": "chemise",
-            "image": "/assets/img/png/chemise.png",
+            "prix": 1265,
+            "type": "costume",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffd2d54e6-640d-4471-a1ef-29591d9e49df%2FUntitled.png?table=block&id=d5dd3d58-ab9b-47ab-9e70-46082b0b4c45&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=1200&userId=&cache=v2",
             "groupe": 1
         },
         {
             "id": 4,
-            "nom": "ceinture1",
+            "nom": "Chemise Blanc",
             "description": "string",
             "couleur": "string",
-            "prix": 20,
-            "type": "ceinture",
-            "image": "/assets/img/png/belt.png",
-            "groupe": 2
+            "prix": 205,
+            "type": "chemise",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4292b2a0-4484-4bf9-b35e-d226056753b2%2FUntitled.png?table=block&id=f7d569c1-7102-44b9-994e-030da9566c62&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=1200&userId=&cache=v2",
+            "groupe": 1
         },
         {
             "id": 5,
-            "nom": "Chaussure",
+            "nom": "Chemise Coton Rayure",
             "description": "string",
             "couleur": "string",
-            "prix": 50,
-            "type": "ceinture",
-            "image": "/assets/img/png/belt.png",
+            "prix": 175,
+            "type": "chemise",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F276c906a-c0fa-47d3-bb34-a598e179e684%2FUntitled.png?table=block&id=fddd334d-6808-4335-8b60-2ae79157a1b4&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=2000&userId=&cache=v2",
+            "groupe": 1
+        },
+        {
+            "id": 5,
+            "nom": "Cravate Oxford Soie",
+            "description": "string",
+            "couleur": "string",
+            "prix": 65,
+            "type": "chemise",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F060f8f1c-76f8-4219-b53b-776f43ca145e%2FUntitled.png?table=block&id=0e0f19a6-481d-4661-91be-0ba6939cefef&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=1200&userId=&cache=v2",
+            "groupe": 2
+        },
+        {
+            "id": 7,
+            "nom": "Cravate liberty",
+            "description": "string",
+            "couleur": "string",
+            "prix": 65,
+            "type": "cravate",
+            "image": "https://myarticles.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F95c12b2f-9456-4237-8953-fa77090118ab%2FUntitled.png?table=block&id=ee25302d-368f-4e76-82c1-78f7899cc6ec&spaceId=5b5b838c-b149-4961-b066-0c17786868ef&width=1200&userId=&cache=v2",
             "groupe": 2
         }
     ]
