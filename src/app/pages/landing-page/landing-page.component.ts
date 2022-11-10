@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IArticles } from 'src/app/shared/entity/articles.model';
 import { ArticlesApiService } from 'src/app/shared/services/api/articles/articles-api.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-landing-page',
@@ -17,7 +18,7 @@ export class LandingPageComponent implements OnInit {
 
     ngOnInit(): void {
         this.articleApiService.getArticlesList().subscribe((data: IArticles[]) => {
-            this.listObject = data;
+            this.listObject = data.filter(element => element.groupe == 1);
         })
     }
 
