@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { IArticles } from 'src/app/shared/entity/articles.model';
+import { ArticlesApiService } from 'src/app/shared/services/api/articles/articles-api.service';
 import { ShopService } from 'src/app/shared/services/entity/shop/shop.service';
 import { LocalStorageService } from 'src/app/shared/services/local-storage/local-storage.service';
 
@@ -29,17 +30,28 @@ export class ShoppingFunnelComponent implements OnInit {
         }]
     public selectedSize=''
     public totalPrice = 0
+    public panier: IArticles[] = []
     public items: IArticles[] = []
 
     constructor(
         private shopService: ShopService,
+        private api:ArticlesApiService,
         private router: Router,
         private localStorage: LocalStorageService,
         private messageService: MessageService
     ) { }
 
     ngOnInit(): void {
-        this.items =  JSON.parse(localStorage.getItem('items')!)
+        this.panier =  JSON.parse(localStorage.getItem('items')!)
+        this.panier.forEach(element => this.totalPrice += element.prix!)
+
+        this.api.getArticlesList().subscribe((data: IArticles[]) => {
+            data.forEach( element => {
+                if(element.groupe === 2){
+                    this.items.push(element);
+                }
+            })
+        })
     }
 
     public quantityChange(quantity: number, item: IArticles): void {

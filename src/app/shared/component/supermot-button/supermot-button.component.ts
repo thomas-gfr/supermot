@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SupermotButtonComponent implements OnInit {
     @Output() emitOnClick = new EventEmitter<Event>();
-    @Input() label: string = 'Button';
+    @Input() label: string = '';
 
     constructor() { }
 

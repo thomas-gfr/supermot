@@ -12,6 +12,8 @@ import { LocalStorageService } from '../../services/local-storage/local-storage.
 export class ListComponent implements OnInit {
 
     @Input() list: IArticles[] = [];
+
+    public buttonLabel: string = 'purchase';
     
     constructor(
         private router: Router,
@@ -30,7 +32,12 @@ export class ListComponent implements OnInit {
             items.push(item);
         }
         this.localStorage.saveData('items', JSON.stringify(items));
-        this.router.navigate(['/shop/funnel']);
     }
+
+    // public onClickRemoveButton(item: any): void {
+    //     this.localStorage.removeItem('items');
+    // }
+
+
 
 }

@@ -20,6 +20,14 @@ body{
         line-height: 24.38px;
         text-decoration: underline;
     }
+    h3{
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 24.38px;  
+        margin: 0;
+    }
     hr {
         color: #C9ADA7;
         width: 90vw;
@@ -30,6 +38,8 @@ body{
     .logo {
         margin: auto;
         display: block;
+        width: 150px;
+        height: 150px;
     }
     .text-yellow {
         color: #FCA311;
@@ -44,8 +54,39 @@ body{
 
 
     .p-card {
+        height: inherit;
+
         .p-card-body, .p-card-content {
-        padding: 0;
+            height: inherit;
+            padding: 0;
+        }
+        .card-image {
+            height: inherit;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+
+            .article-price{
+                color: #46CB53;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .button-hide {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
@@ -53,9 +94,172 @@ body{
         background-color: #FCA311;
         color: black;
         text-transform: uppercase;
+        width: 100%;
     }
     .sticky-button{
         position: sticky;
-        bottom: 60px;
+        bottom: 40px;
+        width: fit-content;
+        margin: auto;
     }
+    .right-part{
+        width: 50vw;
+        height: 300px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    app-supermot-input-number {
+        width: 200px;
+    }
+
+    .p-inputnumber {
+        width: 100px;
+        flex-direction: row;
+        
+        input.p-inputnumber-input{
+            width: 40px;
+            height: 30px;
+        }
+    }
+    .p-inputnumber-buttons-vertical .p-button.p-inputnumber-button-up,
+    .p-inputnumber-buttons-vertical .p-button.p-inputnumber-button-down{
+        width: 30px;
+        height: 30px;
+        border-radius: 0;
+
+    }
+    .p-inputnumber-buttons-vertical .p-button.p-inputnumber-button-down{
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        order: 0;
+    }
+    .p-inputnumber-buttons-vertical .p-button.p-inputnumber-button-up{
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        order: 2;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.p-carousel-container{
+    height: 350px;
+}
+
+app-card {
+    width: 40vw;
+    max-width: 200px;
+    min-width: 150px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+
+    .p-element {
+        height: inherit;
+    }
+
+    .p-card-body {
+        height: inherit;
+    }
+
+    .p-card-content {
+        height: inherit;
+    }
+
+    .card-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        padding: 20px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+.info-produit{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    app-supermot-input-number{
+        width: fit-content;
+    }
+}
+
+app-list {
+
+    .list-article{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #E0E1DD;
+        border-radius: 10px;
+    }
+
+    .list-article > * {
+        width: 40vw;
+        max-width: 200px;
+        min-width: 150px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
+
+fieldset{
+    width: fit-content;
+    margin-bottom: 10px;
+}
+.inline{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.inline :first-child{
+    margin-right: 10px;
+}
+.checkbox_fin_formulaire{
+    margin-bottom: 10px;
+}
+.lien {
+    text-decoration: underline;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vw - 20px);
+
+    div{
+        margin: 5px;
+
+        input{
+            width: 130px;
+        }
+    }
+    .addr{
+        width: 286px;
+    }
+    .checkbox{
+        width: 20px;
+    }
+}
+
+td{
+    text-align: center;
 }

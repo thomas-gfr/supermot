@@ -1,13 +1,19 @@
 <p-card>
-    <div class="content">
-        <ng-template pTemplate="header">
-            {{header}}
-        </ng-template>
-            {{body}}
-        <ng-template pTemplate="footer">
-            {{footer}}
-        </ng-template>
-        <app-supermot-button (emitOnClick)="onClickButton($event)" >
-        </app-supermot-button>
+    <div class="card-content">
+        <div class="card-image">
+            <img src="{{footer}}" alt="{{header}}">
+        </div>
+        <div *ngIf="addedToStock">
+
+            <div class="article-price">
+                {{body}}
+            </div>
+        </div>
+        <div class="info-produit">
+            <div class="article-price">
+                {{body}}
+            </div>
+            <app-supermot-input-number (emitOnChange)="quantityChange($event)"></app-supermot-input-number>
+        </div>
     </div>
 </p-card>

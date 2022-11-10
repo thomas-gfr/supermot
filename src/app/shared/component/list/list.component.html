@@ -1,7 +1,8 @@
-<div *ngFor="let item of list">
-    <app-card [header]="item.nom" [body]="item.description" (emitOnClick)="onClickButton(item)"></app-card>
+<div class="list-article">
+    <div *ngFor="let item of list">
+        <app-card [header]="item.nom" [body]="item.prix" [footer]="item.image" (emitOnClick)="onClickButton(item)"></app-card>
+    </div>
 </div>
-
-<div class="sticky-button">
-    <app-supermot-button *ngIf="localStorage.getData('items')"></app-supermot-button>
-</div>
+<a href="/shop/funnel" class="sticky-button">
+    <app-supermot-button *ngIf="localStorage.getData('items')" [label]="buttonLabel"></app-supermot-button>
+</a>

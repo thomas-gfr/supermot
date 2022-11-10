@@ -2,35 +2,53 @@
     "articles": [
         {
             "id": 1,
-            "nom": "string",
+            "nom": "Costume",
             "description": "string",
             "couleur": "string",
-            "prix": 20,
-            "type": "string",
-            "image": "string",
+            "prix": 80,
+            "type": "costume",
+            "image": "/assets/img/png/chemise.png",
             "groupe": 1
         },
         {
             "id": 2,
-            "nom": "string",
+            "nom": "Chemise1",
+            "description": "string",
+            "couleur": "string",
+            "prix": 40,
+            "type": "chemise",
+            "image": "/assets/img/png/chemise.png",
+            "groupe": 1
+        },
+        {
+            "id": 3,
+            "nom": "Chemise2",
+            "description": "string",
+            "couleur": "string",
+            "prix": 40,
+            "type": "chemise",
+            "image": "/assets/img/png/chemise.png",
+            "groupe": 1
+        },
+        {
+            "id": 4,
+            "nom": "ceinture1",
             "description": "string",
             "couleur": "string",
             "prix": 20,
-            "type": "string",
-            "image": "string",
-            "groupe": 1
-        }
-    ],
-    "belt": [
-        {
-            "id": 1,
-            "name": "ceinture",
-            "description": "couleur noir"
+            "type": "ceinture",
+            "image": "/assets/img/png/belt.png",
+            "groupe": 2
         },
         {
-            "id": 2,
-            "name": "ceinture rayé",
-            "description": "couleur noir et blanche"
+            "id": 5,
+            "nom": "Chaussure",
+            "description": "string",
+            "couleur": "string",
+            "prix": 50,
+            "type": "ceinture",
+            "image": "/assets/img/png/belt.png",
+            "groupe": 2
         }
     ]
   }

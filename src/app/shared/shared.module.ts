@@ -16,7 +16,7 @@ import {ToastModule} from 'primeng/toast';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {CarouselModule} from 'primeng/carousel';
 import { SupermotCarouselComponent } from './component/supermot-carousel/supermot-carousel.component';
-
+import { MatSelectModule } from '@angular/material/select';
 
 const PRIME_NG= [
     DropdownModule,
@@ -46,6 +46,7 @@ const COMPONENTS = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSelectModule,
     ...PRIME_NG,
 
   ],

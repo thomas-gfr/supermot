@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { IArticles } from '../../entity/articles.model';
+import { ArticlesApiService } from '../../services/api/articles/articles-api.service';
 
 @Component({
   selector: 'app-supermot-carousel',
@@ -6,8 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./supermot-carousel.component.scss']
 })
 export class SupermotCarouselComponent implements OnInit {
+    public items: IArticles[] = [];
     
-    @Input() items: any[] = [];
+    @Input() set data( value: IArticles[]) {
+        console.log(value)
+        this.items = value
+    }
+
 
     public responsiveOptions: any[] = [
         {
@@ -26,11 +33,26 @@ export class SupermotCarouselComponent implements OnInit {
             numScroll: 1
         }
     ];
+    localStorage: any;
 
 
     constructor() { }
 
     ngOnInit(): void {
+    }
+
+    ngOnChanges(): void {
+        console.log(this.items);
+    }
+
+    public onClickButton(item: any): void {
+        const items: IArticles[] | null = []
+        if (this.localStorage.getData('items')) {
+            items.push(...JSON.parse(this.localStorage.getData('items')!), item)
+        } else {
+            items.push(item);
+        }
+        this.localStorage.saveData('items', JSON.stringify(items));
     }
 
 }
