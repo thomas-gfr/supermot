@@ -14,12 +14,11 @@
     </tr>
 </table>
 
-<!-- <app-supermot-carousel *ngIf="items" [data]="items"></app-supermot-carousel> -->
-<app-supermot-button (emitOnClick)="onClick()" [label]="'Commander'" ></app-supermot-button>
-
-
-
-
-<div>
-    Prix total : {{ totalPrice }} €
+<div class="prix_total">
+    <span class='lien'>Prix total :</span> {{ totalPrice }} €
 </div>
+<!-- <app-supermot-carousel *ngIf="items" [data]="items"></app-supermot-carousel> -->
+<app-supermot-button (emitOnClick)="onClick()" [label]="'Acheter'" ></app-supermot-button>
+
+
+
